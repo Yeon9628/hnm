@@ -1,0 +1,112 @@
+.login-button {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.login-button button {
+  border: none;
+  background-color: white;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-area {
+  display: flex;
+  align-items: center;
+}
+
+.menu-list {
+  padding: 0;
+  margin: auto;
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.search {
+  right: 20px;
+  position: absolute;
+  border-bottom: 2px solid darkgray;
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.item {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.title, .price {
+  font-size: 14px;
+}
+
+.item img{
+  width: 100%;
+  height: 100%;
+}
+
+.item:hover {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in;
+}
+
+.container{
+  margin-top: 20px;
+}
+
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.information div {
+  padding-bottom: 4px;
+}
+
+.product-title {
+  font-size: 18px;
+}
+
+.product-price {
+  font-size: 20px;
+}
+
+.product-choice {
+  font-size: 12px;
+}
+
+#dropdown-basic {
+  font-size: 12px;
+  margin: 10px 0 10px 0;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.product-btn {
+  width: 100%;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  background-color: black;
+}
+
+@media screen and (max-width: 991px) {
+  
+}
