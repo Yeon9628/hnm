@@ -3,9 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faBars, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { authenticateAction } from '../redux/actions/authenticateAction';
 
-const Navbar = ({ authenticate, setAuthenticate }) => {
+const Navbar = () => {
   let [width, setWidth] = useState(250);
+  const dispatch = useDispatch();
+  const authenticate = useSelector(state => state.auth.authenticate);
   const navigate = useNavigate();
   const search = (event) => {
     if (event.key === "Enter") {
@@ -19,7 +23,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
   return (
     <div>
       <div className="side-menu" style={{ width: width }}>
-        <button className="closebtn" onClick={() => setWidth(0)}>
+        <button className="close-btn" onClick={() => setWidth(0)}>
           &times;
         </button>
         <div className="side-menu-list" id="menu-list">
@@ -32,9 +36,9 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         <div className="burger-menu hide">
           <FontAwesomeIcon icon={faBars} onClick={() => setWidth(250)} />
         </div>
-        <div className='login-button' onClick={authenticate == false ? () => navigate('/login') : () => setAuthenticate(false)}>
+        <div className='login-button' onClick={authenticate ? () => dispatch(authenticateAction.logout()) : () => navigate('/login')}>
           <FontAwesomeIcon icon={faUser} />
-          <div>{authenticate == false ? "로그인" : "로그아웃"}</div>
+          <div>{authenticate ? "로그아웃" : "로그인"}</div>
         </div>
       </div>
       <div className='nav-logo'>
