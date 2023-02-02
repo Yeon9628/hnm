@@ -14,3 +14,6 @@
 
 ![3](https://user-images.githubusercontent.com/106020653/216209629-05250178-ae4f-46a3-96fd-2b5c8c4eb269.PNG)
 ##### 아이템 디테일 페이지입니다. 이 페이지에서 로그아웃을 누르면 로그인 페이지로 이동하게 됩니다.
+
+![4](https://user-images.githubusercontent.com/106020653/216210190-3d6e247f-e47a-4873-94e0-5bc7ecde76f0.PNG)
+##### 제품 검색에서 검색을 할 수 있습니다.
